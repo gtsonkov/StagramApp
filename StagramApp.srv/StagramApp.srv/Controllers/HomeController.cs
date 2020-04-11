@@ -11,7 +11,7 @@ namespace StagramApp.srv.Controllers
         
         public IActionResult Get()
         {
-            return Ok("All works");
+            return Ok("It works!");
         }
     }
 }
