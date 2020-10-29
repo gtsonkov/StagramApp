@@ -1,2 +1,2 @@
 # StagramApp
-Small App using .Net Core 5 Preview and Angular 9
+Small App using .Net Core 5 (Beta-Preview) and Angular 9
