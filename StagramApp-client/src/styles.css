@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+.border{
+    margin: 15% 0%;
+    padding: 5% 5%;
+}
+
+h1{
+     color: rgb(12, 60, 136);
+}
