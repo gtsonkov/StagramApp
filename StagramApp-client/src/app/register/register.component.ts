@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthenticationService } from '../authentication.service';
 
 @Component({
@@ -7,14 +7,15 @@ import { AuthenticationService } from '../authentication.service';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
+
 export class RegisterComponent implements OnInit {
   regiterForm: FormGroup;
-  constructor(private fb: FormBuilder,
-              private authService: AuthenticationService) { 
-    this.regiterForm = this.fb.group({
-      'username': ['', [Validators.required]],
-      'email':['', [Validators.required]],
-      'password':['', [Validators.required]],
+  constructor(private fb: FormBuilder,private authService: AuthenticationService) { 
+                let pattern = '^[^@\\s]+@[^@\\s]+\\.[^@\\s]{2,}';
+                this.regiterForm = this.fb.group({
+      'username': ['', [Validators.required, Validators.minLength(6)]],
+      'email':['', [Validators.required, Validators.pattern(pattern)]],
+      'password':['', [Validators.required, Validators.minLength(8)]],
       'confirmPassword':['', [Validators.required]]
     });
   }
