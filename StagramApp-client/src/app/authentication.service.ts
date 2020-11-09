@@ -7,8 +7,8 @@ import { environment } from '../../src/environments/environment';
   providedIn: 'root'
 })
 export class AuthenticationService {
-  private loginPath = environment.apiUrl + 'login';
-  private registerPath = environment.apiUrl + 'register';
+  private loginPath = environment.apiUrl + '/Identity/Login';
+  private registerPath = environment.apiUrl + '/Identity/Register';
   constructor(private http: HttpClient ) { }
 
   login(data): Observable<any> {
