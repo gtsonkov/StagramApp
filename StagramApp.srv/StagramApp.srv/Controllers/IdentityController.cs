@@ -17,7 +17,7 @@ namespace StagramApp.srv.Controllers
         private readonly UserManager<User> _userManager;
         private readonly ApplicationSettings _appSettings;
 
-        protected IdentityController(UserManager<User> userManager, IOptions<ApplicationSettings> appSettings)
+        public IdentityController(UserManager<User> userManager, IOptions<ApplicationSettings> appSettings)
         {
             this._userManager = userManager;
             this._appSettings = appSettings.Value;

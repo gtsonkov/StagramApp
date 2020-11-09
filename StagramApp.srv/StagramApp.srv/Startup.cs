@@ -38,6 +38,7 @@ namespace StagramApp.srv
                 options.Password.RequireUppercase = false;
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequiredLength = 6;
+                options.SignIn.RequireConfirmedEmail = false;
             })
                 .AddEntityFrameworkStores<StagramDbContext>();
 
